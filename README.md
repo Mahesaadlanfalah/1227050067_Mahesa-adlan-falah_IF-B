@@ -75,5 +75,49 @@ Pada UAS kali ini kami diminta membuat 2 buah program yaitu program pertama adal
           cout << endl;
       }
       
+      
+      #include <iostream>
+#include <iomanip>
+using namespace std;
+int main(){
+    
+	int arr[100][100], jumlahBaris, jumlahKolom, i, j, baris, kolom;
+
+    cout<<" Input jumlah baris: "; 
+	cin>>jumlahBaris;
+    cout<<" Input jumlah kolom: "; 
+	cin>>jumlahKolom;
+    cout << endl;
+
+    for(i = 0; i < jumlahBaris; i++){
+        for(j = 0; j < jumlahKolom; j++){
+            cout << " Baris " <<i+1<<", Kolom "<<j+1<< " = ";
+            cin >> arr[i][j];
+        }
+        cout << endl;
+    }
+
+    cout << " Hasil input nilai : " << endl;
+
+    for(i = 0; i < jumlahBaris ; i++){
+    for(j = 0; j < jumlahKolom; j++){
+        cout << setw(3) << arr[i][j] << " ";
+    }
+    cout << endl;
+    }
+
+    cout << " Hasil bilangan yang habis dibagi 3,5,7 : " << endl;
+
+    for(i = 0; i < jumlahBaris ; i++){
+    for(j = 0; j < jumlahKolom; j++){
+        if(arr[i][j] % 3 == 0 || arr[i][j] % 5 == 0 || arr[i][j] % 7 == 0){
+        cout << setw(3) << arr[i][j] << " ";
+        }
+    }
+    cout << endl;
+    }
+}
       ##Output
       <img width="860" alt="image" src="https://user-images.githubusercontent.com/121010896/209143781-fc6ccca2-daeb-44f6-a582-431e085d74cf.png">
+      <img width="859" alt="image" src="https://user-images.githubusercontent.com/121010896/209145138-858410b3-c625-42cc-a4db-eb9fe12f21c5.png">
+
